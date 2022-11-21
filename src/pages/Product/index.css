@@ -9,15 +9,22 @@
 }
 
 .imgdiv{
-    width: 30%;
-    height: 20% ;
-    padding: 50px;
+    width: 60%;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imgdiv img {
+    width: 45%;
+    margin: 0px 10px 10px 10px;
 }
 
 .right-div{
+    width: 40%;
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 30px 10px 10px 10px;
 }
 
 .sizelist{
@@ -27,15 +34,24 @@
     
 }
 
+.sizelist, div {
+    margin-bottom: 10px;
+}
+
 .sizelist li {
     border: 1px solid #bfc0c6;
     border-radius: 50px;
-    margin: 20px;
-    padding: 10px;
     text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+.sizelist :hover {
+    background: #ff3e6c;
 }
 
 .buttons {
+    margin: 10px;
     max-width: 50%;
     display: flex;
     flex-direction: row;
@@ -49,4 +65,12 @@
 
 .btn1{
     background-color: #ff3e6c;
+}
+
+.titlediv {
+
+}
+
+.ratingdiv {
+
 }

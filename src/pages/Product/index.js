@@ -7,6 +7,7 @@ import {
 }
   from "utils/fetchAproduct";
 import "./index.css";
+import { AiOutlineStar } from 'react-icons/ai';
 
 function Products() {
   const [isFetching, setIsFetching] = useState(true);
@@ -18,7 +19,6 @@ function Products() {
   });
 
   let data = sessionStorage.getItem("key");
-  console.log(data, 'picked')
 
   useEffect(() => {
     setIsFetching(true);
@@ -27,16 +27,12 @@ function Products() {
       product[0].map((item) => {
         if (item.url === data) {
           setItem(item);
-          //console.log(item.url)
+          console.log(item)
           //setFilterData(filter_data);
         }
       })
     });
   }, []);
-
-  const onClick = () => {
-
-  }
 
 
   return (<div>
@@ -48,29 +44,31 @@ function Products() {
         <div className="product-main-div">
           <div className="imgdiv">
             <img src={item.searchImage} alt="" />
+            <img src={item.images[1].src} alt="" />
+            <img src={item.images[2].src} alt="" />
+            <img src={item.images[3].src} alt="" />
           </div>
           <div className="right-div">
-            <h1>
+            <h1 className="text-lg font-bold">
               {item.brand}
             </h1>
-            <div>
+            <div className="titlediv">
               {item.title}
             </div>
-            <div>
-              {item.rating}
+            <div className="flex">
+              {Math.round(item.rating)}<AiOutlineStar/> Rating
             </div>
-            <div>
-              Discounted Price: {item.discountedPrice}
-            </div>
-            <div>
-              Original Price: {item.originalPrice}
-            </div>
-            <div>
-              {item.discountPercentage}
-            </div>
-            inclusive of all taxes
-
-            <div>
+            <div className="flex flex-row text-lg font-bold">
+              <h1 className="font-500">
+                ₹ {item.discountedPrice}
+              </h1>
+              <div className="ml-2 text-orange-500">
+                MRP ₹ <span style={{ textDecoration: 'line-through' } }> {item.originalPrice} </span>
+              </div>
+              <div className="ml-2">
+                {item.discountPercentage}
+              </div>
+            </div> inclusive of all taxes <div>
               Select Size
             </div>
               <ul className="sizelist" style={{ listStyle: 'none' }}>
