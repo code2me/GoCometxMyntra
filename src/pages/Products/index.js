@@ -36,7 +36,7 @@ function Products() {
     setIsFetching(true);
     fetchProductsAndFilters().then(([products, filter_data]) => {
       setProducts(products);
-      console.log(products)
+      //console.log(products)
       setFilterData(filter_data);
       setIsFetching(false);
     });

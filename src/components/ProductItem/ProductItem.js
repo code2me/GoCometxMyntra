@@ -31,6 +31,10 @@ const ProductItem = ({ product }) => {
     [wishlist.wishlistItems, product],
   );
 
+  sessionStorage.setItem("key", `${product.url}`);
+  let data = sessionStorage.getItem("key");
+  //console.log(data, 'ababababb')
+
   return (
     <li
       className="product-item"

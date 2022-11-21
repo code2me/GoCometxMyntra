@@ -1,0 +1,52 @@
+.Homediv {
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.product-main-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.imgdiv{
+    width: 30%;
+    height: 20% ;
+    padding: 50px;
+}
+
+.right-div{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.sizelist{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.sizelist li {
+    border: 1px solid #bfc0c6;
+    border-radius: 50px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.buttons {
+    max-width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btn1, .btn2 {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.btn1{
+    background-color: #ff3e6c;
+}
